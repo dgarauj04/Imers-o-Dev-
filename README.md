@@ -4,10 +4,12 @@ Bem-vindo ao FindmyAi! Este projeto é o seu guia abrangente para o mundo das fe
 Funcionalidades
 
 Busca Simples: Insira termos ou palavras-chave de acordo com sua necessidade, como “Texto” ou “ChatGPT”, e encontre as ferramentas de IA que correspondem a essas funções.
+
 Diretório Curado: Explore uma lista selecionada das melhores ferramentas de IA disponíveis.
+
 Categorias Diversas: Ferramentas organizadas por categorias para facilitar a navegação.
-Como Usar
-Clone o Repositório
+
+Repositório
 git clone https://github.com/dougabrt/Imers-o-Dev-
 
 
