@@ -4,7 +4,6 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-  background: linear-gradient(173deg, #1CB5E0 0%, #1f3467 40%);
   background-position: center;
  /* Cor de fundo da página */
   display: flex; /* Usa Flexbox para layout */
@@ -16,17 +15,36 @@ body {
   padding: 0; /* Remove o padding padrão */
 }
 
+body {
+    background: linear-gradient(-45deg, #ff0000, #1a0d11, #203040, #4d4dff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 /* Estiliza os títulos h1 */
 h1 {
-    font-size: 4.5rem; /* Tamanho da fonte */
+    font-size: 5rem; /* Tamanho da fonte */
     color: #222831; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
-  padding: 1px;
+  padding: 0.5px;
 }
 
 /* Estiliza a mensagem da página*/
-p4 {
+span {
   color: white;
     font-size: 0.9rem;
     text-align: center;
@@ -39,7 +57,7 @@ section {
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens em colunas */
     align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+    margin-bottom: 2rem; /* Espaçamento abaixo de cada seção */
 }
 
 /* Estiliza os inputs dentro das seções */
@@ -57,20 +75,23 @@ section input {
 
 /* Estiliza os botões dentro das seções */
 section button {
-    padding: 0.2rem 0.6rem 0.3rem 0.5rem ; /* Espaçamento interno do botão */
+    padding: 0.2rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
-    border-radius: 6.5rem 6rem 7rem 8rem; /* Borda arredondada */
-    background-color: #1f2e3d; /* Cor de fundo do botão */
+    border-radius: 5rem; /* Borda arredondada */
+    background-color: transparent; /* Cor de fundo do botão */
     color: white; /* Cor do texto do botão */
     font-size: 1.2rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
   display: flex;
    align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
-  margin: 0.5rem; /* Espaçamento entre os botões */
+  margin: 5px 7px; /* Espaçamento entre os botões */
+  width: 100%; /* Garante que o botão não ultrapasse os limites */
+  box-sizing: border-box;
 }
-section .botao {
-    display: flex; /* Alinha os botões lado a lado */ 
+
+.botao {
+    display: flex; /* Alinha os botões lado a lado */
 }
 
 section button ion-icon {
@@ -81,7 +102,6 @@ section button ion-icon {
 
 /* Adiciona efeito hover ao botão de pesquisa */
 section button:hover {
-    background-color:  #45596e; /* Muda a cor de fundo ao passar o mouse */
     box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.4); /* Adiciona uma sombra mais intensa */
   -webkit-transform: scale(1.1);
     transform: scale(0.9);
@@ -89,50 +109,53 @@ section button:hover {
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
-    width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
+  display: none;
+    width: 40rem; /* Largura máxima da caixa de resultados */
+    height: 43vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
   flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
 }
 
 /* Estiliza cada item de resultado */
-.item-resultado {
-    background: #e0d1ff; /* Cor de fundo dos itens */
+.resultados-pesquisa div {
+    background: #040b2c; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-}
-
-.item-resultado:hover{
-  background: white;
+    padding: 0.5rem; /* Espaçamento interno */
+    margin-bottom: 0.5rem; /* Espaçamento abaixo dos itens */
+   box-shadow: 0 2px 4px rgba(0, 0, 1, 1); /* Sombra leve */
 }
 
 /* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2, h3 {
+.resultados-pesquisa h2, h3 {
     font-size: 2.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+    color: #b61206; /* Cor do texto */
+}
+
+.resultados-pesquisa p{
+  color: white;
 }
 
 /* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
+.resultados-pesquisa a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
+    color: #b61206; /* Cor do texto dos links */
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
+.resultados-pesquisa a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+   -webkit-transform: scale(1.3);
+    transform: scale(0.5);
+    color: #524de0; /* Cor do texto dos links */
 }
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
 .descricao-meta {
-    color: #45474B; /* Cor do texto */
+    color: white; /* Cor do texto */
     margin: 0.5rem 0; /* Margem acima e abaixo */
 }
 
@@ -140,10 +163,10 @@ section button:hover {
 footer {
     background-color: #050f19; /* Cor de fundo do rodapé */
     text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
+    padding: 0.5px; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
     position: flex; /* Posiciona o rodapé */
-    bottom: 0; /* Alinha ao fundo da página */
+  margin-top: 5rem;
     font-size: 1rem; /* Tamanho da fonte */
 }
 
@@ -162,6 +185,11 @@ footer {
         width: 40rem; /* Largura da caixa de resultados em telas menores */
         height: 40vh; /* Altura da caixa de resultados em telas menores */
     }
+  
+  .informacoes-div {
+  width: 40rem; /* Largura da caixa de resultados em telas menores */
+  height: 40vh; /* Altura da caixa de resultados em telas menores */  
+  }
 
   .item-resultado h2, h3 {
        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
@@ -169,6 +197,18 @@ footer {
   
   .item-resultado h2, h3 {
     font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+  }
+  
+  p2, p3, p4 {
+    font-size: 0.9rem;
+  }
+  
+  #funcao-categorias, #funcao-pesquisa, #funcao-tudo {
+  padding: 1rem;
+  }
+  
+  .categoria, .subcategoria {
+    padding: 0.8rem;
   }
 }
 
@@ -189,11 +229,26 @@ footer {
         font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
     }
 
+  .categoria-button{
+    padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
+    font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+    }
+  
+  .subcategoria-button {
+   padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
+   font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+    }
+
     .resultados-pesquisa {
         width: 90%; /* Largura da caixa de resultados em telas pequenas */
         height: 50vh; /* Altura da caixa de resultados em telas pequenas */
     }
 
+  .informacoes-div {
+    width: 90%; /* Largura da caixa de resultados em telas pequenas */
+    height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+  }
+  
     .item-resultado h2, h3{
         font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
     }
@@ -205,23 +260,30 @@ footer {
     footer {
         font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
   }
- }
   
+  p2, p3, p4 {
+    font-size: 0.8rem;
+  }
+} 
+   #funcao-categorias, #funcao-pesquisa, #funcao-tudo {
+  padding: 0.5rem;
+ }
+ 
 .icons_link ion-icon { 
   color: #e60000;
   width: 22px;
   align-items: center;
-  height:23px;
-  padding:7px;
+  height: 23px;
    transition: all 0.5s;
     cursor: pointer;
+  padding: 4px;
 }
 
 .icons_link ion-icon:hover{
   color: #524de0;
   trasition: 0,6s;
    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
+    transform: scale(1.3);
 }
 
 p2 {
@@ -242,11 +304,114 @@ p3 {
   letter-spacing: 2px; /* Espaçamento entre letras */
 }
 
-p5 {
+p4 {
   color: #ffe6e6;
   font-size: 14px;
-  align-items:center;
+  align-items: center;
   flex-direction: column;
   display: flex;
+  justify-content: center;
   letter-spacing: 1.4px; /* Espaçamento entre letras */
+}
+
+#funcao-pesquisa {
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  width: 100%; /* Garante que o container ocupe toda a largura */
+}
+
+#funcao-tudo {
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  width: 100%; /* Garante que o container ocupe toda a largura */
+  padding: 7px;
+}
+
+#funcao-categorias {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  width: 100%; /* Garante que o container ocupe toda a largura */
+}
+
+#categorias { 
+  margin: 4px 2px; /* Espaçamento entre os botões */
+  overflow-y: auto; /* Adiciona rolagem vertical */
+    margin-top: 1rem;
+   padding: 0.5rem;
+    border-radius: 0.6rem;
+    height: 50vh; /* Altura máxima da caixa de resultados */
+}
+
+/* Estiliza os botões de categorias e subcategorias */
+.categoria-button {
+  background-color: #050f19; /* Cor de fundo do botão */
+  color: #F0F8FF; /* Cor do texto do botão */
+  border: none; /* Remove a borda do botão */
+  padding: 1rem; /* Espaçamento interno do botão */
+  border-radius: 9px 3px 15px 9px; /* Borda arredondada do botão */
+  cursor: pointer; /* Muda o cursor para uma mão quando o usuário passa o mouse sobre o botão */
+   border-bottom: 3px solid #ddd; /* Borda inferior da subcategoria */
+  transition-duration: 0.4s; /* Tempo de transição para os efeitos de hover */
+  font-size: 1rem; /* Tamanho da fonte do botão */
+} 
+
+.categoria-button:hover {
+  border-radius: 9px 3px 15px 9px;
+  color: #eb9a06; /* Cor do texto do botão quando passa sobre */
+  box-shadow: 0 2px 4px rgba(0, 1.5, 0, 1.5); /* Sombra leve quando passa sobre */
+  -webkit-transform: scale(1.1);
+  transform: scale(0.9); /* Efeito de escala quando passa sobre */
+  background-color: #111b24; /* Cor de fundo do botão quando passa sobre */
+   border-bottom-color: #a5003c;
+}
+
+/* Estiliza as subcategorias */
+.subcategorias-div {
+  border-left: 4px solid purple; /* Borda esquerda da subcategoria */
+  color: #F0F8FF; /* Cor do texto da subcategoria */
+  padding: 1rem; /* Espaçamento interno da subcategoria */ 
+   padding: 1rem;
+    border-radius: 0.6rem;
+}
+
+.subcategoria-button {
+  background-color: #050f19; /* Cor de fundo do botão */
+  border-radius: 0.5rem; /* Borda arredondada da subcategoria */
+  border-bottom: 3px solid #ddd; /* Borda inferior da subcategoria */
+  padding: 0.7rem;
+}
+.subcategoria-button:hover {
+  border-bottom-color: purple; /* Cor da borda inferior quando passa sobre */
+  color: #eb9a06; /* Cor do texto do botão quando passa sobre */
+  box-shadow: 0 2px 4px rgba(0, 1.5, 0, 1.5); /* Sombra leve quando passa sobre */
+}
+
+/* Estiliza as informações */
+.informacoes-div {
+  display: none; /* Esconde as informações por padrão */
+  flex-direction: column; /* Alinha as informações na vertical */
+  align-items: center; /* Centraliza as informações horizontalmente */
+  justify-content: center; /* Centraliza as informações verticalmente */
+  border-left: 5px solid #40ffbf; /* Borda esquerda das informações */
+  background-color: #040b2c; /* Cor de fundo das informações */
+  border-radius: 0.6rem; /* Borda arredondada das informações */
+  padding: 0.5rem; /* Espaçamento interno das informações */
+  box-shadow: 0 2px 4px rgba(0, 0, 1, 1); /* Sombra leve das informações */
+  color: white; /* Cor do texto das informações */
+ width: 30rem; 
+}
+
+.informacoes-div a {
+  color: #ea3608; /* Cor do texto dos links */
+  text-decoration: none; /* Remove a decoração dos links */
+}
+
+.informacoes-div a:hover {
+  text-decoration: underline;
+  transform: scale(0.5); /* Efeito de escala quando passa sobre */
+  color: #524de0; /* Cor do texto dos links quando passa sobre */
 }

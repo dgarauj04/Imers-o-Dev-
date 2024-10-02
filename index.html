@@ -9,50 +9,60 @@
 <body>
 <!-- partial:index.partial.html -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FindMyAI</title>
-  
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
   
 <body>
   <header>
     <h1>FindMyAI</h1>
-    <p4>Encontre a inteligência artificial perfeita para suas necessidades</p4>
+    <span>Encontre a inteligência artificial perfeita para suas necessidades</span>
   </header>
   
   <main> 
     <section> 
-    <input type="text" placeholder="Digite a função que deseja ou IA...." id="campo-pesquisa">
-     <div class="botao">
-     <button onclick="pesquisar()"><ion-icon name="search-circle"></ion-icon>Pesquisar</button>   
-     <button onclick="tudo()"><ion-icon name="menu"></ion-icon>Ver todos</button>
-       </div>
-      </section>
-      
-    <section class="resultados-pesquisa" id="resultados-pesquisa">
+      <input type="text" placeholder="Digite a função que deseja ou IA..." id="campo-pesquisa">
+      <div class="botao">
+        <div id="funcao-pesquisa">
+          <button id="botao-pesquisar"><ion-icon name="search-circle"></ion-icon>Pesquisar</button> 
+        </div>
+        
+        <div id="funcao-tudo">
+          <button id="tudo"><ion-icon name="menu"></ion-icon>Ver todos</button>
+        </div>
+        
+        <div id="funcao-categorias">
+          <button id="botao-categorias"><ion-icon name="list-sharp"></ion-icon>Categorias</button> 
+        </div>
+        
+      </div>
     </section>
+    
+    <section id="resposta">
+      <div id="resultados-pesquisa" class="resultados-pesquisa"></div> 
+      <div id="categorias" style="display: none;"></div>  
+  </section> 
   </main>
   
-  <footer >
-    <p2>2024 - FindMyAI</p2>
+  <footer>
+    <p2>2024 - FindMyAI - DG</p2>
     <p3>Alura | Gemini | Todos os Direitos Reservados.</p3>
-    <p5>Douglas Araujo de Brito</p5>
     
     <div class="icons_link">
-    <a class="icons_link" href="https://instagram.com/dgaraujoo_" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a> 
-    <a class="icons_link" href="https://linkedin.com/in/douglas-araujo-dgprogdev" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
-    <a class="icons_link" href="https://github.com/dougabrt" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+      <a class="icons_link" href="https://instagram.com/dgaraujoo_" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a> 
+      <a class="icons_link" href="https://linkedin.com/in/douglas-araujo-dgprogdev" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a class="icons_link" href="https://github.com/dougabrt" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
     </div>
   </footer>
   
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-   <script src="dados.js"></script> 
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="dados.js"></script> 
   <script src="app.js"></script>
 </body>
 </html>
