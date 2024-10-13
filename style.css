@@ -163,11 +163,14 @@ section button:hover {
 footer {
     background-color: #050f19; /* Cor de fundo do rodapé */
     text-align: center; /* Alinha o texto ao centro */
-    padding: 0.5px; /* Espaçamento interno */
+    padding: 1px; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
     position: flex; /* Posiciona o rodapé */
   margin-top: 5rem;
     font-size: 1rem; /* Tamanho da fonte */
+    bottom: 0;
+    left: 0;
+    position: fixed;
 }
 
 @media (max-width: 768px) {
@@ -213,7 +216,7 @@ footer {
 }
 
 /* Responsividade para celulares */
-@media (max-width: 480px) {
+@media (max-width: 465px) {
 
     h1 {
         font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
