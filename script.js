@@ -18,7 +18,7 @@ let dados = [
   titulo : "Blackbox.ia",
   descricao : "Ferramenta de geração de código impulsionada por IA que ajuda desenvolvedores a escrever código mais rápido e melhor. Sugestões de código, geração de snippets, otimização de erros. Suporta mais de 20 linguagens de programação e integra-se com VSCode.",
   link : "https://www.blackbox.ai/",
-  tags : "automação, análise de dados, inteligência artificial, machine learning, otimização, códigos, programação, javascript, html, css"
+  tags : "automação, análise de dados, inteligência artificial, machine learning, otimização, imagens, imagem, criar imagem, códigos, programação, javascript, html, css"
 },
 
 {
@@ -351,6 +351,11 @@ const categorias = [
         {  titulo : 'Google Gemini',
   descricao : 'O Google Gemini representa um salto significativo na área da inteligência artificial, oferecendo uma gama de possibilidades para o futuro. Sua capacidade de aprender, criar e se adaptar o torna uma ferramenta poderosa com um grande potencial para transformar diversas áreas da nossa vida.',
   link : 'https://gemini.google.com/?hl=pt-BR' }
+      ]},
+      { id: 40, name: 'Blackbox.ia', informacoes: [
+        {  titulo : 'Blackbox.ia',
+  descricao : 'Ferramenta de geração de código impulsionada por IA que ajuda desenvolvedores a escrever código mais rápido e melhor. Sugestões de código, geração de snippets, geração de imagena, otimização de erros. Suporta mais de 20 linguagens de programação e integra-se com VSCode.',
+  link : 'https://www.blackbox.ai/' }
       ]},
         { id: 9, name: 'LumaFusion', informacoes: [
         {  titulo : 'LumaFusion',
