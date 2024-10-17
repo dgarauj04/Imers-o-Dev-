@@ -4,7 +4,7 @@ let dados = [
   titulo : "Google Gemini",
   descricao : "O Google Gemini representa um salto significativo na área da inteligência artificial, oferecendo uma gama de possibilidades para o futuro. Sua capacidade de aprender, criar e se adaptar o torna uma ferramenta poderosa com um grande potencial para transformar diversas áreas da nossa vida.",
   link : "https://gemini.google.com/?hl=pt-BR",
-   tags : "assistente virtual, criar, NLP, IA, Google, aprendizado, adaptação, criação, texto"
+   tags : "assistente virtual, criar, NLP, IA, Google, criação, imagem, criar imagem, imagens, aprendizado, adaptação, criação, texto"
 },
 
  {
@@ -346,6 +346,11 @@ const categorias = [
         { titulo : 'DALL-E 2',
   descricao : 'DALL-E 2 é um modelo de IA desenvolvido pela OpenAI que gera imagens a partir de descrições textuais, permitindo a criação de arte digital e ilustrações de alta qualidade.',
   link : 'https://openai.com/dall-e-2' }
+      ]},
+      { id: 7, name: 'Google Gemini', informacoes: [
+        {  titulo : 'Google Gemini',
+  descricao : 'O Google Gemini representa um salto significativo na área da inteligência artificial, oferecendo uma gama de possibilidades para o futuro. Sua capacidade de aprender, criar e se adaptar o torna uma ferramenta poderosa com um grande potencial para transformar diversas áreas da nossa vida.',
+  link : 'https://gemini.google.com/?hl=pt-BR' }
       ]},
         { id: 9, name: 'LumaFusion', informacoes: [
         {  titulo : 'LumaFusion',
